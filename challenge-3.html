@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce</title>
+    <link rel="stylesheet" href="./dist/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        font-family: "Kumbh Sans", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="h-[1000px]">
+    <main>
+      <section class="mb-3 lg:mb-16">
+        <header>
+          <!-- nav bar -->
+          <div
+            class="nav-bar container lg:w-[75%] w-full lg:h-24 p-5 lg:p-0 bg-white border-b-2 border-b-gray-300 mx-auto"
+          >
+            <div class="flex items-center justify-between">
+              <!-- logo & menu -->
+              <div class="flex gap-10 items-center">
+                <div class="flex items-center gap-5">
+                  <ion-icon onclick="onToggleMenu(this)" class="text-3xl cursor-pointer lg:hidden" name="menu"></ion-icon>
+                    <img src="./ecommerce-img/logo.svg" alt="" />
+                </div>
+                <!-- menu -->
+                <div
+                  class="nav-link duration-300 text-gray-500 lg:text-sm flex justify-center lg:justify-normal lg:flex-row flex-col lg:static lg:gap-8 bg-white absolute left-0 top-[-100%] z-10 h-[50%] w-1/2 lg:h-fit  lg:shadow-none shadow-lg lg:p-0 px-5 py-5"
+                >
+                  <div
+                    class="lg:h-[94px] h-14 hover:text-black hover:border-b-2 hover:border-b-orange-500 flex items-center group"
+                  >
+                    <a class="block w-fit" href="#">Collection</a>
+                  </div>
+                  <div
+                    class="lg:h-[94px] h-14 hover:text-black hover:border-b-2 hover:border-b-orange-500 flex items-center group"
+                  >
+                    <a class="block w-fit" href="#">Men</a>
+                  </div>
+                  <div
+                    class="lg:h-[94px] h-14 hover:text-black hover:border-b-2 hover:border-b-orange-500 flex items-center group"
+                  >
+                    <a class="block w-fit" href="#">Women</a>
+                  </div>
+                  <div
+                    class="lg:h-[94px] h-14 hover:text-black hover:border-b-2 hover:border-b-orange-500 flex items-center group"
+                  >
+                    <a class="block w-fit" href="#">About</a>
+                  </div>
+                  <div
+                    class="lg:h-[94px] h-14 hover:text-black hover:border-b-2 hover:border-b-orange-500 flex items-center group"
+                  >
+                    <a class="block w-fit hover:border-b-orange-600" href="#"
+                      >Contact</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- cart & avatar -->
+              <div class="flex items-center gap-10">
+                <div class="">
+                  <svg
+                    class="group"
+                    width="22"
+                    height="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      class="group-hover:fill-black duration-200"
+                      d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                      fill="#69707D"
+                      fill-rule="nonzero"
+                    />
+                  </svg>
+                </div>
+                <div class="group">
+                  <img
+                    class="w-12 group-hover:ring-2 duration-300 rounded-full hover:ring-offset-2 group-hover:ring-orange-500"
+                    src="./ecommerce-img/image-avatar.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+      </section>
+      <!-- product section -->
+      <section>
+        <div class="container mx-auto w-[90%] lg:w-[65%]">
+          <div class="grid grid-cols-12">
+             <!-- big image -->
+            <div class="col-span-12 lg:col-span-6">
+              <div class="mb-8 w-full rounded-2xl overflow-hidden">
+                <img
+                  class=""
+                  src="./ecommerce-img/image-product-1.jpg"
+                  alt=""
+                />
+              </div>
+              <!-- mini image -->
+              <div class="grid grid-cols-8 gap-8 w-full">
+                <div class="col-span-2 w-full rounded-lg group relative">
+                  <img
+                    class="w-full rounded-lg group-hover:ring-4 duration-300 group-hover:ring-orange-500"
+                    src="./ecommerce-img/image-product-1-thumbnail.jpg"
+                    alt=""
+                  />
+                  <div
+                    class="w-full h-full bg-white/60 absolute rounded-lg bottom-0 opacity-0 group-hover:opacity-100 duration-300"
+                  ></div>
+                </div>
+                <div class="col-span-2 w-full rounded-lg group relative">
+                  <img
+                    class="w-full rounded-lg group-hover:ring-4 duration-300 group-hover:ring-orange-500"
+                    src="./ecommerce-img/image-product-2-thumbnail.jpg"
+                    alt=""
+                  />
+                  <div
+                    class="w-full h-full bg-white/60 absolute rounded-lg bottom-0 opacity-0 group-hover:opacity-100 duration-300"
+                  ></div>
+                </div>
+                <div class="col-span-2 w-full rounded-lg group relative">
+                  <img
+                    class="w-full rounded-lg group-hover:ring-4 duration-300 group-hover:ring-orange-500"
+                    src="./ecommerce-img/image-product-3-thumbnail.jpg"
+                    alt=""
+                  />
+                  <div
+                    class="w-full h-full bg-white/60 absolute rounded-lg bottom-0 opacity-0 group-hover:opacity-100 duration-300"
+                  ></div>
+                </div>
+                <div class="col-span-2 w-full rounded-lg group relative">
+                  <img
+                    class="w-full rounded-lg group-hover:ring-4 duration-300 group-hover:ring-orange-500"
+                    src="./ecommerce-img/image-product-4-thumbnail.jpg"
+                    alt=""
+                  />
+                  <div
+                    class="w-full h-full bg-white/60 absolute rounded-lg bottom-0 opacity-0 group-hover:opacity-100 duration-300"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <!-- extra space -->
+            <div class="col-span-1"></div>
+            <!-- text beside product -->
+            <div class="col-span-12 lg:col-span-5">
+              <div class="mt-8 lg:mt-16 mb-6">
+                <p
+                  class="text-orange-500 font-bold text-sm tracking-widest mb-4"
+                >
+                  SNEAKER COMPANY
+                </p>
+                <div class="mb-8">
+                  <h1 class="text-4xl font-bold text-black">
+                    Fall Limited Edition
+                  </h1>
+                  <h1 class="text-4xl font-bold text-black">Sneaker</h1>
+                </div>
+                <p class="text-gray-500 text-sm">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
+                  repudiandae unde aliquid, quod, harum natus corrupti
+                  voluptatem.
+                </p>
+              </div>
+              <!-- price -->
+              <div class="mb-6 flex items-center justify-between lg:block">
+                <div class="flex items-center gap-5 mb-2">
+                  <div class="text-2xl font-bold">$125.00</div>
+                  <div
+                    class="bg-orange-100 px-2 text-orange-500 rounded-lg font-semibold"
+                  >
+                    50%
+                  </div>
+                </div>
+                <p class="text-gray-500 font-semibold text-sm line-through">
+                  $250.00
+                </p>
+              </div>
+              <div class="flex justify-between md:justify-end lg:justify-start md:gap-4">
+                <!-- qty -->
+                <div
+                  class="flex items-center gap-9 bg-neutral-200 py-3 w-32 justify-center rounded-lg"
+                >
+                  <!-- minus -->
+                  <div class="relative group h-full flex items-center">
+                    <svg
+                      width="12"
+                      height="4"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <defs>
+                        <path
+                          d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z"
+                          id="a"
+                        />
+                      </defs>
+                      <use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#a" />
+                    </svg>
+                    <div
+                      class="absolute w-[200%] h-[140%] bg-neutral-100/50 rounded-lg bottom-1/2 right-1/2 translate-x-1/2 translate-y-1/2 opacity-0 group-hover:opacity-100 duration-200"
+                    ></div>
+                  </div>
+                  <p class="font-bold">0</p>
+                  <!-- plus -->
+                  <div class="relative group h-full flex items-center">
+                    <svg
+                      width="12"
+                      height="12"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <defs>
+                        <path
+                          d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z"
+                          id="b"
+                        />
+                      </defs>
+                      <use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#b" />
+                    </svg>
+                    <div
+                      class="absolute w-[200%] h-[140%] bg-neutral-100/50 rounded-lg bottom-1/2 right-1/2 translate-x-1/2 translate-y-1/2 opacity-0 group-hover:opacity-100 duration-200"
+                    ></div>
+                  </div>
+                </div>
+                <!-- add to cart -->
+                <div
+                  class="flex items-center gap-3 w-40 justify-center rounded-lg py-3 bg-orange-500 text-white relative group"
+                >
+                  <svg
+                    width="22"
+                    height="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                      fill="#fff"
+                      fill-rule="nonzero"
+                    />
+                  </svg>
+                  <span class="text-sm">Add to cart</span>
+                  <div
+                    class="absolute w-full h-full bg-white/50 top-0 opacity-0 group-hover:opacity-100 duration-300"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const navLink = document.querySelector('.nav-link')
+      function onToggleMenu(e) {
+        e.name = e.name === 'menu' ? 'close' : 'menu'
+        navLink.classList.toggle('top-[90px]')
+      }
+    </script>
+  </body>
+</html>
